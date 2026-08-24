@@ -1,0 +1,3 @@
+goal:
+basic language features
+find out specialization to focus on
