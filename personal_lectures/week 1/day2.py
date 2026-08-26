@@ -1,6 +1,6 @@
 """
 Description:
-
+no coding in today's class.
 
 Notes:
 language is associating something (tokens) with meaning, 
