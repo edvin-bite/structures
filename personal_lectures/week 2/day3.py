@@ -2,7 +2,10 @@
 Description:
 coding in today's class;
 
+simple expressions: literals, operators, and precedance
+lecture example: PMDAS (no exponential) expressions
 
+pipeline: tokenizer -> parser -> evaluator -> result
 
 """
 
