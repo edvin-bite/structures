@@ -7,6 +7,9 @@ lecture example: PMDAS (no exponential) expressions
 
 pipeline: tokenizer -> parser -> evaluator -> result
 
+tokenizer:     (for PMDAS example)
+    Identifies integers and floats, +-*/%, parentheses (), excluded text / comments
+
 """
 
 from typing import Any
