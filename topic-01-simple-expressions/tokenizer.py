@@ -3,7 +3,7 @@ from pprint import pprint
 
 patterns = [
     (r"\s+", "whitespace"),
-    (r"\d+", "number"),
+    (r"\d*\.\d+|\d+\.\d*|\d+", "number"),
     (r"\+", "+"),
     (r"\-", "-"),
     (r"\/", "/"),
@@ -39,7 +39,10 @@ def tokenize(characters):
         if current_tag != "whitespace":
             token = {"tag": current_tag, "line": line, "column": column}
             if current_tag == "number":
-                token["value"] = int(value)
+                if "." in value:
+                    token["value"] = float(value)
+                else:
+                    token["value"] = int(value)
             tokens.append(token)
 
         # advance position and update line/column
@@ -64,6 +67,22 @@ def test_digits():
     t = tokenize("1")
     assert t[0]["tag"] == "number"
     assert t[0]["value"] == 1
+    assert t[1]["tag"] is None
+
+
+def test_floats():
+    print("test tokenize floats")
+    t = tokenize("12.5")
+    assert t[0]["tag"] == "number"
+    assert t[0]["value"] == 12.5
+    assert t[1]["tag"] is None
+    t = tokenize(".5")
+    assert t[0]["tag"] == "number"
+    assert t[0]["value"] == 0.5
+    assert t[1]["tag"] is None
+    t = tokenize("5.")
+    assert t[0]["tag"] == "number"
+    assert t[0]["value"] == 5.0
     assert t[1]["tag"] is None
 
 
@@ -108,6 +127,7 @@ def test_error():
 
 if __name__ == "__main__":
     test_digits()
+    test_floats()
     test_operators()
     test_expressions()
     test_whitespace()
