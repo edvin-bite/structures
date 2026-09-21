@@ -1,2 +1,4 @@
 day 6?
 
+storing variables, assignments etc.
+
