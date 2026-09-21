@@ -1,5 +1,15 @@
 """
-statements: assignments, print, 
+"homework": try out and see how things are ordered
+Tokenizer
+
+uses JSON for AST tree for class example
+smaller binary alternative for python: bison? bithon?
+
+Give set of local patterns to scan for.  EBNF below:
+# Pattern strategy:     [ {} optional? | ]
+    expression = term { ("+" | "-") term }              // expression, term, and factor in this example are meaningless, they seperate *precedance*
+    term       = factor { ("*" | "/") factor }    // this is recursive descent.
+    factor     = <number> | "(" expression ")"            // "+" and "-" are terminal, operator? <> means terminal in EBNF
 """
 
 import re
