@@ -10,9 +10,8 @@
         body {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            display: flex;
-            align-items: center;
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            padding: 48px 24px;
         }
 
         .container {
@@ -20,12 +19,35 @@
             border-radius: 12px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
             padding: 40px;
+            max-width: 960px;
+            width: 100%;
         }
 
         h1 {
             color: #667eea;
-            margin-bottom: 30px;
+            margin-bottom: 18px;
             font-weight: 700;
+            font-size: 42px;
+            line-height: 1.1;
+        }
+
+        .intro {
+            color: #444;
+            font-size: 17px;
+            line-height: 1.55;
+            margin-bottom: 30px;
+            max-width: 780px;
+        }
+
+        .chapter-label {
+            color: #764ba2;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .chapter-title {
+            white-space: nowrap;
         }
 
         .toc-section {
@@ -68,41 +90,28 @@
 </head>
 
 <body>
-    <div class="container" style="max-width: 600px">
-        <h1>📚 Structure of Programming Languages</h1>
+    <div class="container">
+        <h1>Structure of Programming Languages</h1>
+        <p class="intro">This course studies how programming languages are specified and implemented. We build Vertex in small steps, connecting syntax, parsing, evaluation, and runtime behavior.</p>
 
         <div class="toc-section">
-            <h2>Workbook Chapters</h2>
-            <a href="workbook/chapter-00-what-is-a-programming-language.pdf" class="toc-link">
+            <h2>Chapters</h2>
+            <a href="chapter-00-what-is-a-programming-language/index.html" class="toc-link">
                 Chapter 0: What Is a Programming Language?
                 <div class="description">Language, syntax, semantics, and the implementation of Vertex.</div>
             </a>
-            <a href="workbook/chapter-01-simple-expressions.pdf" class="toc-link">
+            <a href="chapter-01-simple-expressions/index.html" class="toc-link">
                 Chapter 1: Simple Expressions
-                <div class="description">Vertex's tokenizer, expression trees, recursive-descent parser, and evaluator.</div>
+                <div class="description">Vertex&#x27;s tokenizer, expression trees, recursive-descent parser, and evaluator.</div>
+            </a>
+            <a href="chapter-02-programs-and-assignments/index.html" class="toc-link">
+                Chapter 2: Programs and Assignments
+                <div class="description">Programs, statements, assignment, print, and the environment model.</div>
             </a>
         </div>
         <div class="toc-section">
-            <h2>Slide Decks</h2>
-            <a href="slides/topic-00-slides.html" class="toc-link">
-                Chapter 0: What Is a Programming Language?
-                <div class="description">An introduction to Vertex and language implementation.</div>
-            </a>
-            <a href="slides/chapter-01-simple-expressions/topic-01-slides.html" class="toc-link">
-                Chapter 1: Simple Expressions
-                <div class="description">Following an expression through tokenization, parsing, and evaluation.</div>
-            </a>
-        </div>
-        <div class="toc-section">
-            <h2>References</h2>
-            <a href="notes/notes-regex.pdf" class="toc-link">
-                Regular Expressions
-                <div class="description">Patterns and tokenization.</div>
-            </a>
-            <a href="notes/notes-EBNF.pdf" class="toc-link">
-                Extended Backus-Naur Form (EBNF)
-                <div class="description">Grammar notation and concepts.</div>
-            </a>
+            <h2>Repository</h2>
+            <p class="intro">The course code is in the public GitHub repository at <a href="https://github.com/kentcs/structures">kentcs/structures</a>. You can fork it on GitHub, clone it with <code>git clone https://github.com/kentcs/structures.git</code>, or open it in <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=1347707811">GitHub Codespaces</a>.</p>
         </div>
     </div>
 
