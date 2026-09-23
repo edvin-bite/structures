@@ -1,0 +1,5 @@
+supply 18.5
+add 2
+print "total 20.5"
+
+check result and confirm input is consumed
