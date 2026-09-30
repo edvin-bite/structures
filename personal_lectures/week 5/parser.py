@@ -23,11 +23,6 @@ from tokenizer import tokenize
 #   input_expression ::= "input" "(" [ expression ] ")"
 #   number_expression ::= "number" "(" expression ")"
 #   string_expression ::= "string" "(" expression ")"
-#   
-#   expression ::= logic_or
-#   logic_or ::= logic_and { "or" logic_and }
-#   logic_and ::= logic_not { "and" logic_not }
-#   logic_not ::= "not" logic_not | comparison #
 #
 # input has function-shaped syntax, but this chapter does not implement
 # general function calls, parameters, or function values.
